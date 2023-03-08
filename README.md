@@ -1,5 +1,5 @@
 # :mage:	Documentación de C
-Link directo al proyecto: [link](https://lordlez.github.io/hogwarts-form/)
+Link directo al proyecto: [link](https://lordlez.github.io/documentacion-C/)
 
 
 # 📝 Objetivo del proyecto
