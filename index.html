@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Documentación C</title>
+</head>
+
+<body>
+
+    <nav id="navbar">
+        <header>Documentación C</header>
+        <ul>
+            <li><a href="#Introducción" class="nav-link">Introducción</a></li>
+            <li><a href="#Hola_Mundo" class="nav-link">Hola Mundo</a></li>
+            <li><a href="#Tipo_De_Datos" class="nav-link">Tipo De Datos</a></li>
+            <li><a href="#Variables" class="nav-link">Variables</a></li>
+            <li><a href="#Condicionales" class="nav-link">Condicionales</a></li>
+            <li><a href="#Ciclos" class="nav-link">Ciclos</a></li>
+            <li><a href="#Funciones" class="nav-link">Funciones</a></li>
+            <li><a href="#Referencias" class="nav-link">Referencias</a></li>
+        </ul>
+        <figure>
+            <img src="c.png" alt="logo de C" class="logo">
+        </figure>
+    </nav>
+
+    <main id="main-doc">
+
+        <section class="main-section" id="Introducción">
+            <header>Introducción</header>
+            <article>
+                <p>
+                    Uno de los objetivos de diseño del lenguaje C es que solo sean necesarias unas pocas instrucciones
+                    en lenguaje máquina para traducir cada elemento del lenguaje, sin que haga falta un soporte intenso
+                    en tiempo de ejecución. Es muy posible escribir C a bajo nivel de abstracción; de hecho, C se usó
+                    como intermediario entre diferentes lenguajes.
+                    En parte, a causa de ser de relativamente bajo nivel y de tener un modesto conjunto de
+                    características, se pueden desarrollar compiladores de C fácilmente. En consecuencia, el lenguaje C
+                    está disponible en un amplio abanico de plataformas (más que cualquier otro lenguaje). Además, a
+                    pesar de su naturaleza de bajo nivel, el lenguaje se desarrolló para incentivar la programación
+                    independiente de la máquina. Un programa escrito cumpliendo los estándares e intentando que sea
+                    portátil puede compilarse en muchos computadores.
+                    C se desarrolló originalmente (conjuntamente con el sistema operativo Unix, con el que ha estado
+                    asociado mucho tiempo) por programadores para programadores. Sin embargo, ha alcanzado una
+                    popularidad enorme, y se ha usado en contextos muy alejados de la programación de software de
+                    sistema, para la que se diseñó originalmente.
+                </p>
+
+            </article>
+        </section>
+
+        <section class="main-section" id="Hola_Mundo">
+            <header>Hola Mundo</header>
+            <article>
+
+                <p>
+                    Para comenzar, vamos con el famoso "Hola Mundo" esta vez utilizando la sintaxis del lenguaje C:
+                    Intenta poner en práctica el código visto y observa los resultados.
+                </p>
+                <code>#include <stdio.h>
+                    int main(){
+                        printf("Hola Mundo!");
+                        return 0;
+                    }
+                </code>
+            </article>
+        </section>
+
+        <section class="main-section" id="Tipo_De_Datos">
+            <header>Tipo De Datos</header>
+            <article>
+
+                <p>
+                    En el lenguaje C contamos con varios tipos de datos, todos ellos nos sirven según nuestras
+                    necesidades. Los tres tipos de datos básicos de C son:
+                </p>
+                <ul>
+                    <li>Números enteros</li>
+                    <li>Números flotantes</li>
+                    <li>Caracteres alfanuméricos</li>
+                </ul>
+            </article>
+        </section>
+
+        <section class="main-section" id="Variables">
+            <header>Variables</header>
+            <article>
+                <p>
+                    El lenguaje C obliga a declarar una variable antes de ser usada. Declarar una variable no significa
+                    que se le asigne contenido, sino simplemente se indica que la variable existe.
+                    ¿Qué nos mostrará si intentamos mostrar o utilizar la variable si no le hemos asignado contenido?
+                    Hay lenguajes que asignan automáticamente contenido cero, vacío o falso a una variable, dependiendo
+                    de qué tipo sea. Sin embargo en C no está permitido usar una variable sin antes haberle asignado un
+                    contenido, a lo que se denomina “inicializar la variable”. Por tanto, al tratar de ejecutar un
+                    programa donde una variable está sin inicializar puede producirse un error de compilación.
+                    Además, las variables se pueden clasificar en dos grupos, globales y locales.
+                    Para poder utilizar variables es necesario especificar el tipo de dato que tendrá dicha variable,
+                    estos son algunos ejemplos de la declaración de variables:
+                </p>
+                <code>int numero;
+                    float monedas;
+                    char nombre;
+                </code>
+                <p>
+                    Sin embargo, aún nos falta asignarle algún valor a dichas variables. Los valores que les asignemos
+                    deben corresponder si o si al tipo de dato que la variable fue declarada.
+                    Por lo tanto, si queremos inicializar nuestras variables lo podriamos hacer de la siguiente manera:
+                </p>
+                <code>numero = 5;
+                    monedas = 50,25;
+                    nombre = "Lorenzo";
+                </code>
+                <p>
+                    Si prestás atención, podés ver que ya no hace falta poner el tipo de dato que tiene la variable,
+                    puesto que eso ya fue hecho en la declaración de la misma.
+                    Simplemente basta con asignarle un valor a la variable que corresponda con su tipo de dato y listo,
+                    ya tendriamos nuestras variables declaradas e inicializadas.
+                </p>
+            </article>
+        </section>
+
+        <section class="main-section" id="Condicionales">
+            <header>Condicionales</header>
+            <article>
+
+                <p>
+                    Los condicionales son sentencias de control donde la condición es la expresión que será evaluada. Si
+                    es verdadera el extracto se ejecuta, si es falsa, entonces el extracto es ignorado.
+                    Este tipo de sentencias permiten variar el flujo del programa en base a unas determinadas
+                    condiciones.
+                    Podemos diferencias la estructura if - else y la estructura switch. Comencemos con la primera:
+                </p>
+                <code>if (condición){
+                        sentencia1;
+                    }else{
+                        sentencia2;
+                    }
+                </code>
+                <p>
+                    Mientras que switch:
+                </p>
+                <code>switch(variable){
+                        case contenido_variable1:
+                            sentencias;
+                            break;
+                        case contenido_variable2:
+                            sentencias;
+                            break;
+                        defaulf:
+                            sentencias;
+                    }
+                </code>
+                <p>
+                    Cada case puede incluir una o más sentencias sin necesidad de ir entre llaves, ya que se pueden
+                    ejecutar todas hasta que se encuentra la sentencia break.
+                    La variable evaulada solo puede ser de tipo entero o caracter. Default ejecutará las sentencias que
+                    incluya, en caso de que la opción escogida no exista.
+                </p>
+            </article>
+        </section>
+
+        <section class="main-section" id="Ciclos">
+            <header>Ciclos</header>
+            <article>
+
+                <p>
+                    Los ciclos son una estructura de control para repetir una o mas instrucciones. La ejecución del
+                    cuerpo del ciclo es controlada por una expresión lógica. En C contamos con tres tipos de cilos que
+                    podemos utilizar, los cuales son:
+                </p>
+                <ul>
+                    <li>for</li>
+                    <li>while</li>
+                    <li>do while</li>
+                </ul>
+                <p>
+                    El ciclo for, se caracteriza por su condicion de fin, el cual es previamente conocido al momento de
+                    ejecutarlo, y su sintáxis es la siguiente:
+                </p>
+                <code>for(i = valor; i < condicion; i++){
+                        sentencias;
+                    }
+                </code>
+                <p>
+                    El ciclo while, por el contrario al ciclo for, no sabemos exactamente el fin previamente del ciclo
+                    de forma que se le debe dar una condicion de fin que, llegado el momento de cumplirse, el ciclo
+                    termina. Su sintaxis es asi:
+                </p>
+                <code>while(condicion){
+                        sentencia;
+                    }
+                </code>
+                <p>
+                    Por ultimo, el ciclo do while, es un ciclo que se ejecutará por lo menos una vez. Es muy útil para
+                    crear menús, validación de datos, etc. Su sintáxis es la siguiente:
+                </p>
+                <code>do{
+                        sentencias;
+                    }while(condición);
+                </code>
+            </article>
+        </section>
+
+        <section class="main-section" id="Funciones">
+            <header>Funciones</header>
+            <article>
+
+                <p>
+                    En C, se conocen como funciones aquellos trozos de códigos utilizados para dividir un programa
+                    con el objetivo que, cada bloque realice una tarea determinada.
+                    Una función puede ser llamada desde cualquier parte del programa no sólo una vez, y cuando es
+                    llamada, empieza a ejecutar las acciones que están escritas en código.
+                    Ejemplo de funciones:
+                </p>
+                <ul>
+                    <li>Funciones que no devuelven ningún valor</li>
+                    <li>Funciones que devuelven un valor entero</li>
+                    <li>Funciones que devuelven un valor Real</li>
+                    <li>Funciones combinadas</li>
+                </ul>
+            </article>
+        </section>
+
+        <section class="main-section" id="Referencias">
+            <header>Referencias</header>
+            <article>
+
+                <p>
+                    Para profundizar más sobre este lenguaje, podés visitar este <a href="#" class="link">LINK</a> e investigar más
+                    sobre C.
+                </p>
+            </article>
+        </section>
+
+    </main>
+
+</body>
+
+</html>
