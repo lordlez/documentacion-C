@@ -1,4 +1,4 @@
-# :mage:	Documentación de C
+# :bookmark_tabs:	Documentación de C
 Link directo al proyecto: [link](https://lordlez.github.io/documentacion-C/)
 
 
